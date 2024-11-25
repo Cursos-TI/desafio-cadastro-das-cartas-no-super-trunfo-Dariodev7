@@ -2,13 +2,16 @@
 
 
 int main() {
-
+ char nome[100];
  long int populacao;
  float area;
  double pib;
  int numpontosTuriscos;
 
-
+ 
+ printf("nome da cidade: \n");
+ fgets(nome, sizeof(nome), stdin);
+ 
  printf("digite quantidade de populacao: \n");
  scanf("%ld", &populacao);
 
@@ -25,11 +28,11 @@ int main() {
 
 
 printf("\n--- dados ---\n");
+printf("nome: %s", nome);
 printf("populacao: %ld\n", populacao);
 printf("area: %f\n",area);
 printf("pib: %lf\n", pib);
 printf("ponto turisco: %d\n", numpontosTuriscos);
-
 
 
 

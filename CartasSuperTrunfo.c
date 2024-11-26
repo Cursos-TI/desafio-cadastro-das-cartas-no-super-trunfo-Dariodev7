@@ -1,41 +1,32 @@
 #include <stdio.h>
 
-
 int main() {
- char nome[100];
- long int populacao;
- float area;
- double pib;
- int numpontosTuriscos;
 
- 
- printf("nome da cidade: \n");
- fgets(nome, sizeof(nome), stdin);
- 
- printf("digite quantidade de populacao: \n");
- scanf("%ld", &populacao);
+double populacao, area, pib;
+float media;
 
- printf("digite a area: \n");
- scanf("%f", &area);
+//entrada de dados
+printf("digite quantidade de população: \n");
+scanf("%lf", &populacao);
 
- printf("digite o pib: \n");
- scanf("%lf", &pib);
+printf("digite a area: \n");
+scanf("%lf", &area);
+
+printf("digite o pib: \n");
+scanf("%lf", &pib);
 
 
- printf("digite numero de ponto turisco: \n");
- scanf("%d", &numpontosTuriscos);
+//calculos
+double densidade = populacao /area;
+double pib_per_capital = pib / populacao;
 
-
-
-printf("\n--- dados ---\n");
-printf("nome: %s", nome);
-printf("populacao: %ld\n", populacao);
-printf("area: %f\n",area);
-printf("pib: %lf\n", pib);
-printf("ponto turisco: %d\n", numpontosTuriscos);
+//exibir resultados
+printf("densidade populacional: %.2f habitantes por km \n", densidade);
+printf("PIB per capital %.2f \n", pib_per_capital);
 
 
 
 
-    return 0;
+return 0;
+
 }
